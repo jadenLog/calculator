@@ -1,0 +1,49 @@
+{
+  "name": "calculator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "local": "webpack-dev-server --config ./webpack/webpack.config.js --env.ENVIRONMENT=local --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jadenLog/calculator.git"
+  },
+  "author": "Jaden",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jadenLog/calculator/issues"
+  },
+  "homepage": "https://github.com/jadenLog/calculator#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.6.3",
+    "@babel/polyfill": "^7.6.0",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/preset-react": "^7.6.3",
+    "babel-eslint": "^10.0.3",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^4.3.0",
+    "dotenv": "^8.1.0",
+    "eslint": "^7.7.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-flowtype": "^5.2.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.16.0",
+    "eslint-plugin-react-hooks": "^4.1.2",
+    "html-webpack-plugin": "^4.3.0",
+    "sass": "^1.27.0",
+    "sass-loader": "^10.0.3",
+    "style-loader": "^2.0.0",
+    "terser-webpack-plugin": "^4.1.0",
+    "url-loader": "^4.1.0",
+    "webpack": "^4.41.0",
+    "webpack-bundle-analyzer": "^3.6.0",
+    "webpack-cleanup-plugin": "^0.5.1",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.8.2",
+    "webpack-merge": "^5.1.3"
+  }
+}
