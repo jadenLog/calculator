@@ -1,0 +1,30 @@
+.button {
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 25px;
+  transition: opacity 300ms;
+  outline: none;
+
+  font-size: 16px;
+
+  &.orange {
+    background-color: #FF9500;
+  }
+
+  &.gray {
+    background-color: #D4D4D2;
+  }
+
+  &.dark-gray {
+    background-color: #505050;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &.long {
+    width: 100px;
+  }
+}
