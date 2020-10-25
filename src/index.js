@@ -20,7 +20,7 @@ const number8ButtonElement = Button(['dark-gray'], '8', () => {
     window.alert('8 Clicked');
 }).get();
 const number9ButtonElement = Button(['dark-gray'], '9', () => {
-    window.alert('8 Clicked');
+    window.alert('9 Clicked');
 }).get();
 const multiplyButtonElement = Button(['orange'], 'X', () => {
     window.alert('Multiplication Clicked');
@@ -40,15 +40,15 @@ const SubtractButtonElement = Button(['orange'], '-', () => {
 }).get();
 
 const number1ButtonElement = Button(['dark-gray'], '1', () => {
-    window.alert('4 Clicked');
+    window.alert('1 Clicked');
 }).get();
 const number2ButtonElement = Button(['dark-gray'], '2', () => {
-    window.alert('5 Clicked');
+    window.alert('2 Clicked');
 }).get();
 const number3ButtonElement = Button(['dark-gray'], '3', () => {
-    window.alert('6 Clicked');
+    window.alert('3 Clicked');
 }).get();
-const PlusButtonElement = Button(['orange'], '_', () => {
+const PlusButtonElement = Button(['orange'], '+', () => {
     window.alert('Plus Clicked');
 }).get();
 
