@@ -7,26 +7,39 @@ class Calculation {
         this.result = number;
     }
 
-    calculate(method, number) {
+    calculate(method, number1, number2) {
         const types = Object.values(Calculation.METHOD_TYPES);
 
-        if (types.includes(method)) this[method](number);
+        if (types.includes(method)) {
+            this.set(number1);
+            return this[method](number2);
+        }
+
+        return 0;
     }
 
     add(number) {
         this.result += number;
+
+        return this.result;
     }
 
     subtract(number) {
         this.result -= number;
+
+        return this.result;
     }
 
     multiply(number) {
         this.result *= number;
+
+        return this.result;
     }
 
     divide(number) {
         this.result /= number;
+
+        return this.result;
     }
 }
 

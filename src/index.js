@@ -1,63 +1,93 @@
+import Calculation from './logic/Calculation';
+import Calculator from './logic/Calculator';
 import Button from './components/Button';
 import Table from './components/Table';
 import './index.scss';
 
+const calcaulator = new Calculator();
 const appElement = document.getElementById('app');
 
+const displayElement = document.createElement('div');
+displayElement.id = 'display-number';
+displayElement.innerText = calcaulator.display;
+appElement.append(displayElement);
+
 const clearButtonElement = Button(['gray'], 'C', () => {
-    window.alert('Clear Clicked');
+    calcaulator.init();
 }).get();
 const signChangeButtonElement = Button(['gray'], '+/-').get();
 const percentButtonElement = Button(['gray'], '%').get();
 const divideButtonElement = Button(['orange'], '/', () => {
-    window.alert('Division Clicked');
+    calcaulator.onMethodClicked(Calculation.METHOD_TYPES.DIVIDE);
 }).get();
 
 const number7ButtonElement = Button(['dark-gray'], '7', () => {
-    window.alert('7 Clicked');
+    calcaulator.onNumberClicked(7);
+
+    displayElement.innerText = calcaulator.display;
 }).get();
 const number8ButtonElement = Button(['dark-gray'], '8', () => {
-    window.alert('8 Clicked');
+    calcaulator.onNumberClicked(8);
+
+    displayElement.innerText = calcaulator.display;
 }).get();
 const number9ButtonElement = Button(['dark-gray'], '9', () => {
-    window.alert('9 Clicked');
+    calcaulator.onNumberClicked(9);
+
+    displayElement.innerText = calcaulator.display;
 }).get();
 const multiplyButtonElement = Button(['orange'], 'X', () => {
-    window.alert('Multiplication Clicked');
+    calcaulator.onMethodClicked(Calculation.METHOD_TYPES.MULTIPLY);
 }).get();
 
 const number4ButtonElement = Button(['dark-gray'], '4', () => {
-    window.alert('4 Clicked');
+    calcaulator.onNumberClicked(4);
+
+    displayElement.innerText = calcaulator.display;
 }).get();
 const number5ButtonElement = Button(['dark-gray'], '5', () => {
-    window.alert('5 Clicked');
+    calcaulator.onNumberClicked(5);
+
+    displayElement.innerText = calcaulator.display;
 }).get();
 const number6ButtonElement = Button(['dark-gray'], '6', () => {
-    window.alert('6 Clicked');
+    calcaulator.onNumberClicked(6);
+
+    displayElement.innerText = calcaulator.display;
 }).get();
 const SubtractButtonElement = Button(['orange'], '-', () => {
-    window.alert('Subtraction Clicked');
+    calcaulator.onMethodClicked(Calculation.METHOD_TYPES.SUBTRACT);
 }).get();
 
 const number1ButtonElement = Button(['dark-gray'], '1', () => {
-    window.alert('1 Clicked');
+    calcaulator.onNumberClicked(1);
+
+    displayElement.innerText = calcaulator.display;
 }).get();
 const number2ButtonElement = Button(['dark-gray'], '2', () => {
-    window.alert('2 Clicked');
+    calcaulator.onNumberClicked(2);
+
+    displayElement.innerText = calcaulator.display;
 }).get();
 const number3ButtonElement = Button(['dark-gray'], '3', () => {
-    window.alert('3 Clicked');
+    calcaulator.onNumberClicked(3);
+
+    displayElement.innerText = calcaulator.display;
 }).get();
 const PlusButtonElement = Button(['orange'], '+', () => {
-    window.alert('Plus Clicked');
+    calcaulator.onMethodClicked(Calculation.METHOD_TYPES.ADD);
 }).get();
 
 const number0ButtonElement = Button(['dark-gray', 'long'], '0', () => {
-    window.alert('0 Clicked');
+    calcaulator.onNumberClicked(0);
+
+    displayElement.innerText = calcaulator.display;
 }).get();
 const dotButtonElement = Button(['dark-gray'], '.').get();
 const equalButtonElement = Button(['orange'], '=', () => {
-    window.alert('equal Clicked');
+    calcaulator.onEqualClicked();
+
+    displayElement.innerText = calcaulator.display;
 }).get();
 
 const tableElement = Table([
